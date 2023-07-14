@@ -8,6 +8,7 @@ import HRLogin from './components/HRLogin';
 import HRRegister from './components/HRRegister';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RatingForm from './components/RatingForm';
+import Home from './components/Home';
 
 
 function App() {
@@ -15,10 +16,10 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
-      
+      <Route path='/' element={<Home/>}/>
       <Route path='/hradminDash' element={<HrAdminDash/>}/>
       <Route path='/addRecruiter' element={<AddRecruiter/>}/>
-      <Route path='/' element={<HRLogin/>}/>
+      <Route path='/loginhr' element={<HRLogin/>}/>
       <Route path='/registerhr' element={<HRRegister/>}/>
       <Route path='/registercandidate' element={<CandidateRegister/>}/>
       <Route path='/logincandidate' element={<CandidateLogin/>}/>
