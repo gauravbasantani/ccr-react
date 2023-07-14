@@ -1,0 +1,25 @@
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+  }
+table, th, td {
+    border: 1px solid;
+   
+}
+td{
+    margin: auto;
+    padding: 10px;
+}
+.heading{
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+.rating{
+    padding: 50px;
+}
+.submitButton{
+    margin-top: 10px;
+    text-align: center;
+}
