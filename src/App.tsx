@@ -1,4 +1,6 @@
 
+import AddRecruiter from './components/AddRecruiter';
+import HrAdminDash from './components/HrAdminDash';
 import Login from './components/Login';
 import Register from './components/Register';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -11,6 +13,8 @@ function App() {
     <Routes>
       <Route path='/' element={<Login/>}/>
       <Route path='/register' element={<Register/>}/>
+      <Route path='/hradminDash' element={<HrAdminDash/>}/>
+      <Route path='/addRecruiter' element={<AddRecruiter/>}/>
     </Routes>
     </BrowserRouter>
  
