@@ -54,7 +54,7 @@ const HRLogin = () => {
             <input type='email' name={'hr_email'} value={data.hr_email} id='hr_email' onChange={(e)=>handleChange(e)} placeholder='Enter email address' />
             <input type='password' name={'hr_password'} value={data.hr_password} id='hr_password' onChange={(e)=>handleChange(e)} placeholder='Enter passsword' />    
             <button className='btn' type={'submit'}>Submit</button>
-           <Link className='lin' to="/register" >Register</Link>
+           <Link className='lin' to="/registerhr" >Register</Link>
            
          </form>   
     </div>
