@@ -8,14 +8,11 @@ type AuthHr ={
   hr_email:string,
   hr_password:string
 }
-const Login = () => {
+const HRLogin = () => {
   // const [data, setData] = useState<Auth>({
   const [data, setData] = useState<AuthHr>({
     hr_email : '',
     hr_password : '',
-    
-   
-  
   })
 
 
@@ -65,4 +62,4 @@ const Login = () => {
   )
 }
 
-export default Login;
+export default HRLogin;

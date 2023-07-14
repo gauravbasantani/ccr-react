@@ -18,7 +18,7 @@ type Data = {
 
 
   
-const Register = () => {
+const HRRegister = () => {
   
   const [data, setData] = useState<Data>({
     company_name : '',
@@ -103,4 +103,4 @@ const Register = () => {
   )
 }
 
-export default Register;
+export default HRRegister;
