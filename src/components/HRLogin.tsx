@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import './Login.css'
-import {Link} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
 import axios from 'axios';
+
+
 type AuthHr ={
   hr_email:string,
   hr_password:string
@@ -14,9 +16,10 @@ const HRLogin = () => {
   })
 
 
+  let navigate = useNavigate();
+
   const handleChange = (e :React.ChangeEvent<HTMLInputElement>) =>{
     setData({...data,[e.target.name] : e.target.value});
-    console.log({...data,[e.target.name] : e.target.value})
    
 
   }
@@ -26,10 +29,17 @@ const HRLogin = () => {
      hr_email: data.hr_email,
      hr_password : data.hr_password
 
-      
   
     }).then(res=>{
-      console.log(res.data);
+      console.log(res);
+      localStorage.setItem('hr_id', res.data.hr_id);
+      localStorage.setItem('hr_name', res.data.hr_name);
+      localStorage.setItem('hr_email', res.data.hr_email);
+      localStorage.setItem('hr_role', res.data.hr_role);
+
+
+      navigate("/hradminDash");
+      
     }).catch(()=>{
       console.log("error")
     })
@@ -43,8 +53,9 @@ const HRLogin = () => {
         <form className='form' onSubmit={(e)=>handleSubmit(e)}>
             <input type='email' name={'hr_email'} value={data.hr_email} id='hr_email' onChange={(e)=>handleChange(e)} placeholder='Enter email address' />
             <input type='password' name={'hr_password'} value={data.hr_password} id='hr_password' onChange={(e)=>handleChange(e)} placeholder='Enter passsword' />    
-           <Link className='lin' to="/register" >Register</Link>
             <button className='btn' type={'submit'}>Submit</button>
+           <Link className='lin' to="/register" >Register</Link>
+           
          </form>   
     </div>
     </div>
