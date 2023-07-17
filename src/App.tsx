@@ -9,6 +9,8 @@ import HRRegister from './components/HRRegister';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RatingForm from './components/RatingForm';
 import Home from './components/Home';
+import ForgotPasswordCand from './components/ForgotPasswordCand';
+import EnterOTP from './components/EnterOTP';
 
 
 function App() {
@@ -24,11 +26,13 @@ function App() {
       <Route path='/registercandidate' element={<CandidateRegister/>}/>
       <Route path='/logincandidate' element={<CandidateLogin/>}/>
       <Route path='/ratingform' element={<RatingForm/>}/>
+       <Route path='/enteremail' element={<ForgotPasswordCand/>}/> 
+   <Route path='/enterotp' element={<EnterOTP/>}/>
 
     </Routes>
     </BrowserRouter>
  
-    
+
     </>
   );
 }
