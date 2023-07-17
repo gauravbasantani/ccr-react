@@ -42,12 +42,14 @@ const CandidateRegister = () => {
             candidate_name : data.candidate_name,
             candidate_password : data.candidate_password,
             candidate_phone : data.candidate_phone,
+      }).then((res)=>{
+        console.log(res.data);
       })}
   return (
     <div className='login'>
 
     <div className='container'>
-        <p className='heading'>Register Company</p>
+        <p className='heading'>Register Candidate</p>
 
         <form className='form' onSubmit={(e) => handleSubmit(e)}>
             <input type='text' name={'candidate_name'} value={data.candidate_name} id='candidate_name' onChange={(e)=>handleChange(e)} placeholder='Enter candidate name' />

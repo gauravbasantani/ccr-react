@@ -1,170 +1,99 @@
-import './RatingForm.css';
+import axios from 'axios';
 
-const RatingForm = () => {
-    return (
-      <div>
-          <p className='heading'> Rating Form</p>
-          <div className='rating'>
-              <table>
-                  <tr>
-                      <th>Q No.</th>
-                      <th>Questiions</th>
-                      <th>Response</th>
-                  </tr>
-                  <tr>
-                      <strong><p className='heading'>Commitment</p></strong>
-                  </tr>
-                  <tr>
-                    <td>Q1</td>
-                    <td>Has the candidate worked for a prior company for at least 2-3 years, exhibiting the candidate's dedication to a job or organization?</td>
-                    <td>
-                        <span>
-                        <input type="radio" id="yes" name="fav_language" value="HTML"/>
-                        <label htmlFor="yes">Yes</label>
-                        <input type="radio" id="no" name="fav_lan guage" value="CSS"/>
-                        <label htmlFor="no">No</label>
-                        </span>
-                    </td>
-                  </tr>
-                    <tr>
-                    <td>Q2</td>
-                    <td>Is the candidate willing to sign the service agreement?</td>
-                    <td>
-                        <span>
-                        <input type="radio" id="yes" name="fav_language" value="HTML"/>
-                        <label htmlFor="yes">Yes</label>
-                        <input type="radio" id="no" name="fav_lan guage" value="CSS"/>
-                        <label htmlFor="no">No</label>
-                        </span>
-                    </td>
-                  </tr>
+import React, { useState } from 'react';
 
-                  <tr>
-                      <strong><p className='heading'>Behavior & Appearance</p></strong>
-                  </tr>
-                  <tr>
-                    <td>Q3</td>
-                    <td>Did the candidate demonstrate professionalism and maintain a professional demeanor towards the interview panel during the hiring process?</td>
-                    <td>
-                        <span>
-                        <input type="radio" id="yes" name="fav_language" value="HTML"/>
-                        <label htmlFor="yes">Yes</label>
-                        <input type="radio" id="no" name="fav_lan guage" value="CSS"/>
-                        <label htmlFor="no">No</label>
-                        </span>
-                    </td>
-                  </tr>
-                    <tr>
-                    <td>Q4</td>
-                    <td>Did the applicant dress appropriately for the interview?</td>
-                    <td>
-                        <span>
-                        <input type="radio" id="yes" name="fav_language" value="HTML"/>
-                        <label htmlFor="yes">Yes</label>
-                        <input type="radio" id="no" name="fav_lan guage" value="CSS"/>
-                        <label htmlFor="no">No</label>
-                        </span>
-                    </td>
-                  </tr>
+type Question = {
+  id: number;
+  text: string;
+}
 
+type Answer = {
+  id: number;
+  value: boolean | null;
+}
 
+const questions: Question[] = [
+  { id: 1, text: 'Has the candidate worked for a prior company for at least 2-3 years, exhibiting the candidates dedication to a job or organization?' },
+  { id: 2, text: 'Is the candidate willing to sign the service agreement?' },
+  { id: 3, text: 'Did the candidate demonstrate professionalism and maintain a professional demeanor towards the interview panel during the hiring process?' },
+  {id: 4, text:'Did the applicant dress appropriately for the interview?'},
+  {id: 5, text:'Did the candidate exhibit strong communication skills during the hiring process?'},
+  {id: 6, text:'Did the candidate have a clear way of expressing themselves?'},
+  {id: 7, text:'Did the candidate possess relevant certifications for the position they applied for?'},
+  {id: 8, text:'Did the candidate meet the required qualifications stated in the job description for the position they were applying for?'},
+  {id: 9, text:'Did the candidate have the necessary technical abilities for the job?'},
+  {id: 10, text:'Did the candidate display problem-solving and critical thinking skills?'},
+];
 
-                  <tr>
-                      <strong><p className='heading'>Communication & Soft Skills</p></strong>
-                  </tr>
-                  <tr>
-                    <td>Q5</td>
-                    <td>Did the candidate exhibit strong communication skills during the hiring process?</td>
-                    <td>
-                        <span>
-                        <input type="radio" id="yes" name="fav_language" value="HTML"/>
-                        <label htmlFor="yes">Yes</label>
-                        <input type="radio" id="no" name="fav_lan guage" value="CSS"/>
-                        <label htmlFor="no">No</label>
-                        </span>
-                    </td>
-                  </tr>
-                    <tr>
-                    <td>Q6</td>
-                    <td>Did the candidate have a clear way of expressing themselves?</td>
-                    <td>
-                        <span>
-                        <input type="radio" id="yes" name="fav_language" value="HTML"/>
-                        <label htmlFor="yes">Yes</label>
-                        <input type="radio" id="no" name="fav_lan guage" value="CSS"/>
-                        <label htmlFor="no">No</label>
-                        </span>
-                    </td>
-                  </tr>
-           
+const RatingForm: React.FC = () => {
+  const [answers, setAnswers] = useState<Answer[]>([]);
 
-                  <tr>
-                      <strong><p className='heading'>Certifications & Education</p></strong>
-                  </tr>
-                  <tr>
-                    <td>Q7</td>
-                    <td>Did the candidate possess relevant certifications for the position they applied for?</td>
-                    <td>
-                        <span>
-                        <input type="radio" id="yes" name="fav_language" value="HTML"/>
-                        <label htmlFor="yes">Yes</label>
-                        <input type="radio" id="no" name="fav_lan guage" value="CSS"/>
-                        <label htmlFor="no">No</label>
-                        </span>
-                    </td>
-                  </tr>
-                    <tr>
-                    <td>Q8</td>
-                    <td>Did the candidate meet the required qualifications stated in the job description for the position they were applying for?</td>
-                    <td>
-                        <span>
-                        <input type="radio" id="yes" name="fav_language" value="HTML"/>
-                        <label htmlFor="yes">Yes</label>
-                        <input type="radio" id="no" name="fav_lan guage" value="CSS"/>
-                        <label htmlFor="no">No</label>
-                        </span>
-                    </td>
-                  </tr>
-
-                  <tr>
-                      <strong><p className='heading'>Behavior & Appearance</p></strong>
-                  </tr>
-                  <tr>
-                    <td>Q9</td>
-                    <td>Did the candidate have the necessary technical abilities for the job?</td>
-                    <td>
-                        <span>
-
-                        <input type="radio" id="yes" name="fav_language" value="HTML"/>
-                        <label htmlFor="yes">Yes</label>
-                        <input type="radio" id="no" name="fav_lan guage" value="CSS"/>
-                        <label htmlFor="no">No</label>
-                        </span>
-                    </td>
-                  </tr>
-                    <tr>
-                    <td>Q10</td>
-                    <td>Did the candidate display problem-solving and critical thinking skills?</td>
-                    <td>
-                        <span>
-                        <input type="radio" id="yes" name="fav_language" value="HTML"/>
-                        <label htmlFor="yes">Yes</label>
-                        <input type="radio" id="no" name="fav_lan guage" value="CSS"/>
-                        <label htmlFor="no">No</label>
-                        </span>
-                    </td>
-                  </tr>
-
-
-              </table> 
-                <div className='submitButton'>
-                <button type='submit' >Submit</button> 
-                </div>
-                
-          </div>
-      </div>
+  const handleAnswerChange = (questionId: number, value: boolean) => {
+    const updatedAnswers = [...answers];
+    const existingAnswerIndex = updatedAnswers.findIndex(
+      (answer) => answer.id === questionId
     );
+
+    if (existingAnswerIndex !== -1) {
+      // Update existing answer
+      updatedAnswers[existingAnswerIndex].value = value;
+    } else {
+      // Add new answer
+      updatedAnswers.push({ id: questionId, value });
+    }
+
+    setAnswers(updatedAnswers);
   };
-  
-  export default RatingForm;
-  
+
+  const handleSubmit = async () => {
+    try {
+      // Send the answers to the backend
+      await axios.post('http://localhost:8090/saveYesNo', {
+        
+      });
+
+      // Reset the form
+     // setAnswers(Array(10).fill(false));
+    } catch (error) {
+      console.error('Error submitting answers:', error);
+    }
+    console.log(answers);
+  };
+
+  return (
+    <div>
+      <h1>Rating Form</h1>
+      <form>
+        {questions.map((question) => (
+          <div key={question.id}>
+            <p>{question.text}</p>
+            <label>
+              <input
+                type="radio"
+                value="true"
+                checked={answers.find((a) => a.id === question.id)?.value === true}
+                onChange={() => handleAnswerChange(question.id, true)}
+              />
+              Yes
+            </label>
+            <label>
+              <input
+                type="radio"
+                value="false"
+                name='question.id'
+                checked={answers.find((a) => a.id === question.id)?.value === false}
+                onChange={() => handleAnswerChange(question.id, false)}
+              />
+              No
+            </label>
+          </div>
+        ))}
+        <button type="button" onClick={handleSubmit}>
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default RatingForm;

@@ -9,6 +9,7 @@ import HRRegister from './components/HRRegister';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RatingForm from './components/RatingForm';
 import Home from './components/Home';
+import Rating from './components/Rating';
 
 
 function App() {
@@ -23,7 +24,9 @@ function App() {
       <Route path='/registerhr' element={<HRRegister/>}/>
       <Route path='/registercandidate' element={<CandidateRegister/>}/>
       <Route path='/logincandidate' element={<CandidateLogin/>}/>
-      <Route path='/ratingform' element={<RatingForm/>}/>
+      {/* <Route path='/ratingform' element={<RatingForm/>}/> */}
+
+      <Route path='/rating' element={<Rating/>}/>
 
     </Routes>
     </BrowserRouter>
