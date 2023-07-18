@@ -23,7 +23,7 @@ const HrAdminDash = () => {
 
 return(
 <div style={{textAlign:'center'}}>
-    <h3>HR Admin Dashboard</h3>
+    <h3>HR  Dashboard</h3>
 
     <form  onSubmit={(e) => handleSubmit(e)} ><br/><br/><br/>
     <button style={{width:'200px',height:'50px'}} type={"submit"}>Add Recruiter</button>
