@@ -12,6 +12,7 @@ import Home from './components/Home';
 import Rating from './components/Rating';
 import ForgotPasswordCand from './components/ForgotPasswordCand';
 import EnterOTP from './components/EnterOTP';
+import EnterPassword from './components/EnterPassword';
 
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
       <Route path='/rating' element={<Rating/>}/>
        <Route path='/enteremail' element={<ForgotPasswordCand/>}/> 
    <Route path='/enterotp' element={<EnterOTP/>}/>
+   <Route path='/enterpassword' element={<EnterPassword/>}/>
+   
 
     </Routes>
     </BrowserRouter>
