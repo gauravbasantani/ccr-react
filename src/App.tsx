@@ -8,7 +8,7 @@ import HRLogin from './components/HRLogin';
 import HRRegister from './components/HRRegister';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RForm from './components/RForm';
-// // import RatingForm from './components/RatingForm';
+
 import AdminLogin from './components/CCRAdminLogin';
 import Home from './components/Home';
 import Rating from './components/Rating';
@@ -34,10 +34,12 @@ function App() {
       <Route path='/registerhr' element={<HRRegister/>}/>
       <Route path='/registercandidate' element={<CandidateRegister/>}/>
       <Route path='/logincandidate' element={<CandidateLogin/>}/>
+
       <Route path='/candidatedash' element={<CandidateDash/>}/>
 
       {/* <Route path='/d1' element={<Desktop1/>}/> */}
       {/* <Route path='/ratingform' element={<RatingForm/>}/> */}
+
       
       <Route path='/rform' element={<RForm/>}/>
 
