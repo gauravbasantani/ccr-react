@@ -19,6 +19,7 @@ import CCRAdminDash from './components/CCRAdminDash';
 import SuperAdminDash from './components/SuperAdminDash';
 import AddCcrAdmin from './components/AddCcrAdmin';
 import CCRAdminLogin from './components/CCRAdminLogin';
+import CandidateDash from './components/CandidateDash';
 
 
 function App() {
@@ -33,6 +34,11 @@ function App() {
       <Route path='/registerhr' element={<HRRegister/>}/>
       <Route path='/registercandidate' element={<CandidateRegister/>}/>
       <Route path='/logincandidate' element={<CandidateLogin/>}/>
+
+      <Route path='/candidatedash' element={<CandidateDash/>}/>
+
+      {/* <Route path='/d1' element={<Desktop1/>}/> */}
+      {/* <Route path='/ratingform' element={<RatingForm/>}/> */}
 
       
       <Route path='/rform' element={<RForm/>}/>
