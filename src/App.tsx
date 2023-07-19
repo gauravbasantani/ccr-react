@@ -7,7 +7,8 @@ import HRLogin from './components/HRLogin';
 
 import HRRegister from './components/HRRegister';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import RatingForm from './components/RatingForm';
+import RForm from './components/RForm';
+// // import RatingForm from './components/RatingForm';
 import AdminLogin from './components/CCRAdminLogin';
 import Home from './components/Home';
 import Rating from './components/Rating';
@@ -37,6 +38,8 @@ function App() {
 
       {/* <Route path='/d1' element={<Desktop1/>}/> */}
       {/* <Route path='/ratingform' element={<RatingForm/>}/> */}
+      
+      <Route path='/rform' element={<RForm/>}/>
 
       <Route path='/rating' element={<Rating/>}/>
        <Route path='/enteremail' element={<ForgotPasswordCand/>}/> 
@@ -47,9 +50,6 @@ function App() {
    <Route path='/ccradmindash' element={<CCRAdminDash/>}/>
    <Route path='/superadmindash' element={<SuperAdminDash/>}/>
    <Route path='/addccradmin' element={<AddCcrAdmin/>}/>
-
-
-   
 
     </Routes>
     </BrowserRouter>
