@@ -38,6 +38,9 @@ const HRLogin = () => {
       localStorage.setItem('hr_email', res.data.hr_email);
       localStorage.setItem('hr_role', res.data.hr_role);
       
+      console.log(res.data.hr_role);
+      
+
       navigate("/hradminDash");
 
       
