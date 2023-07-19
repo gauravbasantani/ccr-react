@@ -5,10 +5,10 @@ const SuperAdminDash = () => {
   let ccr_name=localStorage.getItem("ccr_name");
   let ccr_role=localStorage.getItem("ccr_role");
 return (
-  <>
-  <div>Welcome {ccr_name} as Super Admin</div>
+  <div style={{textAlign:'center'}}><br/><br/>
+  Welcome {ccr_name} as Super Admin<br/><br/>
   <Link to='/addccradmin'> <button>ADD CCR ADMIN</button></Link>
-  </>
+  </div>
 )
 }
 

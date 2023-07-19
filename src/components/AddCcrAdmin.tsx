@@ -71,7 +71,6 @@ const AddCcrAdmin = () => {
 
             Name: <input type="text" onChange={handleChange}  name={"ccr_name"}/><br/><br/>
             Email: <input type="text" onChange={handleChange}  name={"ccr_email"}/><br/><br/>
-            Password: <input type="password" onChange={handleChange}  name={"ccr_password"}/><br/><br/>
             Phone: <input type="text" onChange={handleChange}  name={"ccr_phone"}/><br/><br/>
             
            

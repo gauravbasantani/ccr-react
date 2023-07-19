@@ -8,7 +8,7 @@ type AuthAdmin ={
     ccr_email:string,
     ccr_password:string
 }
-const HRLogin = () => {
+const CCRAdminLogin = () => {
   // const [data, setData] = useState<Auth>({
   const [data, setData] = useState<AuthAdmin>({
     ccr_email : '',
@@ -59,11 +59,11 @@ const HRLogin = () => {
     <div className='login'>
 
     <div className='container'>
-        <p className='heading'>Admin Login</p>
+        <p className='heading'>CCR Admin Login</p>
 
         <form className='form' onSubmit={(e)=>handleSubmit(e)}>
-            <input type='email' name={'ccr_email'} value={data.ccr_email} id='hr_email' onChange={(e)=>handleChange(e)} placeholder='Enter email address' />
-            <input type='password' name={'ccr_password'} value={data.ccr_password} id='hr_password' onChange={(e)=>handleChange(e)} placeholder='Enter passsword' />    
+            <input type='email' name={'ccr_email'} value={data.ccr_email} id='ccr_email' onChange={(e)=>handleChange(e)} placeholder='Enter email address' />
+            <input type='password' name={'ccr_password'} value={data.ccr_password} id='ccr_password' onChange={(e)=>handleChange(e)} placeholder='Enter passsword' />    
             <button className='btn' type={'submit'}>Submit</button>
            <Link className='lin' to="/registerhr" >Register</Link>
            
@@ -73,4 +73,4 @@ const HRLogin = () => {
   )
 }
 
-export default HRLogin;
+export default CCRAdminLogin;

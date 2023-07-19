@@ -11,6 +11,7 @@ const ForgotPasswordCand = () => {
   const [data, setData] = useState<AuthEmail>({
     candidate_email: '',
   });
+  const [message, setMessage] = useState("");
   let navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,7 +25,7 @@ const ForgotPasswordCand = () => {
       candidate_email: data.candidate_email,
     })
       .then((res) => {
-        console.log(res.data);
+        setMessage(res.data);
         localStorage.setItem('candidate_email', data.candidate_email);
         
      //   let storedEmail = localStorage.getItem('candidate_email');
@@ -33,8 +34,9 @@ const ForgotPasswordCand = () => {
         navigate('/enterotp');
       })
       .catch((error) => {
-        console.log('Error:', error.message);
-        // Handle the error here (e.g., display an error message)
+   
+     setMessage(error.response.data);
+      
       });
   };
 
@@ -52,6 +54,8 @@ const ForgotPasswordCand = () => {
             placeholder='Enter email address'
           />
           <button className='btn' type='submit'>Send OTP</button>
+          <br/><br/>
+          <p>{message}</p>
         </form>
       </div>
     </div>

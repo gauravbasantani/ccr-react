@@ -80,7 +80,7 @@ const HRRegister = () => {
   return (
     <div className='login'>
 
-    <div className='container'>
+    <div className=''>
         <p className='heading'>Register Company</p>
 
         <form className='form' onSubmit={(e) => handleSubmit(e)}>
@@ -95,7 +95,7 @@ const HRRegister = () => {
             <input type='text' name={'hr_email'} value={hr.hr_email} id='hr_email' onChange={(e)=>handleChange(e)} placeholder='Enter email address' />    
            
             <input type='password' name={'hr_password'} value={hr.hr_password} id='hr_password' onChange={(e)=>handleChange(e)} placeholder='Enter password' />
-            <input type='tel' name={'hr_phone'} value={hr.hr_phone} id='hr_phone' onChange={(e)=>handleChange(e)} placeholder='Enter Phone number' />
+            <input type='tel' name={'hr_phone'} value={hr.hr_phone} id='hr_phone' onChange={(e)=>handleChange(e)} placeholder='Enter Phone number' /><br/>
             <button className='btn' type={"submit"}>Submit</button>
          </form>   
     </div>

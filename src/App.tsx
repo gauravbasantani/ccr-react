@@ -7,16 +7,18 @@ import HRLogin from './components/HRLogin';
 
 import HRRegister from './components/HRRegister';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Desktop1 from './components/demo';
 import RatingForm from './components/RatingForm';
-import AdminLogin from './components/AdminLogin';
+import AdminLogin from './components/CCRAdminLogin';
 import Home from './components/Home';
 import Rating from './components/Rating';
 import ForgotPasswordCand from './components/ForgotPasswordCand';
 import EnterOTP from './components/EnterOTP';
 import EnterPassword from './components/EnterPassword';
-import CCRAdmin from './components/CCRAdmin';
-import SuperAdmin from './components/SuperAdmin';
+import CCRAdminDash from './components/CCRAdminDash';
+import SuperAdminDash from './components/SuperAdminDash';
 import AddCcrAdmin from './components/AddCcrAdmin';
+import CCRAdminLogin from './components/CCRAdminLogin';
 
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
       <Route path='/registerhr' element={<HRRegister/>}/>
       <Route path='/registercandidate' element={<CandidateRegister/>}/>
       <Route path='/logincandidate' element={<CandidateLogin/>}/>
+      {/* <Route path='/d1' element={<Desktop1/>}/> */}
       {/* <Route path='/ratingform' element={<RatingForm/>}/> */}
 
       <Route path='/rating' element={<Rating/>}/>
@@ -38,9 +41,9 @@ function App() {
    <Route path='/enterotp' element={<EnterOTP/>}/>
    <Route path='/enterpassword' element={<EnterPassword/>}/>
 
-   <Route path='/adminlogin' element={<AdminLogin/>}/>
-   <Route path='/ccradmindash' element={<CCRAdmin/>}/>
-   <Route path='/superadmindash' element={<SuperAdmin/>}/>
+   <Route path='/ccradminlogin' element={<CCRAdminLogin/>}/>
+   <Route path='/ccradmindash' element={<CCRAdminDash/>}/>
+   <Route path='/superadmindash' element={<SuperAdminDash/>}/>
    <Route path='/addccradmin' element={<AddCcrAdmin/>}/>
 
 

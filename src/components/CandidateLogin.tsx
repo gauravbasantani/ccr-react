@@ -39,11 +39,10 @@ const CandidateLogin = () => {
 
         <form className='form' onSubmit={(e)=>handleSubmit(e)}>
             <input type='email' name={'candidate_email'} value={data.candidate_email} id='candidate_email' onChange={(e)=>handleChange(e)} placeholder='Enter email address' />
-            <input type='password' name={'candidate_password'} value={data.candidate_password} id='candidate_password' onChange={(e)=>handleChange(e)} placeholder='Enter passsword' />    
-           <Link className='lin' to="/registercandidate" >Register</Link>
-           <Link className='lin' to="/enteremail" >Forgot Password ?</Link>
-           <br/>
-            <button className='btn' type={'submit'}>Submit</button>
+            <input type='password' name={'candidate_password'} value={data.candidate_password} id='candidate_password' onChange={(e)=>handleChange(e)} placeholder='Enter passsword' /> 
+            <Link className='lin' to="/enteremail" >Forget Password</Link>   <br/>
+            <button className='btn' type={'submit'}>Submit</button><br/>
+            <Link className='lin' to="/registercandidate" >Register</Link>
          </form>   
     </div>
     </div>
