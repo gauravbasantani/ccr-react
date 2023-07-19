@@ -34,6 +34,7 @@ const EnterOTP = () => {
       })
       .catch(() => {
         console.log('Please Enter Correct OTP');
+        alert("Enter Correct OTP");
       });
   };
 
