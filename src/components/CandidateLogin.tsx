@@ -22,7 +22,7 @@ const CandidateLogin = () => {
         axios.post('http://localhost:8090/candidatelogin', {
             candidate_email: data.candidate_email,
             candidate_password : data.candidate_password
-    
+          
           
       
         }).then(res=>{
