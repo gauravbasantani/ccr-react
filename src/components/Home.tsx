@@ -5,8 +5,13 @@ const Home = () => {
   return (
     <div>
         <p className='heading'>Welcome to CCR</p>
-      <Link to='/logincandidate' > <button>Candidate Login</button></Link>
-        <Link to='/loginhr'><button>HR Login</button></Link>
+       
+      <Link to='/logincandidate' > <button>Candidate Login</button></Link>&nbsp;
+        <Link to='/loginhr'><button>HR Login</button></Link>&nbsp;
+        <Link to='/adminlogin'><button>Admin Login</button></Link>
+    
+
+        
     </div>
   )
 }

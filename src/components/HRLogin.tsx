@@ -32,13 +32,15 @@ const HRLogin = () => {
   
     }).then(res=>{
       console.log(res);
+
       localStorage.setItem('hr_id', res.data.hr_id);
       localStorage.setItem('hr_name', res.data.hr_name);
       localStorage.setItem('hr_email', res.data.hr_email);
       localStorage.setItem('hr_role', res.data.hr_role);
-
-
+      
       navigate("/hradminDash");
+
+      
       
     }).catch(()=>{
       console.log("error")
