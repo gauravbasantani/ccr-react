@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import axios from 'axios';
 type AuthHr ={
   candidate_email:string,
   candidate_password:string
 }
 const CandidateLogin = () => {
+  let navigate = useNavigate();
     const [data, setData] = useState<AuthHr>({
         candidate_email : '',
         candidate_password : '',
@@ -27,6 +28,7 @@ const CandidateLogin = () => {
       
         }).then(res=>{
           console.log(res.data);
+          navigate("/candidatedash");
         }).catch(()=>{
           console.log("error")
         })

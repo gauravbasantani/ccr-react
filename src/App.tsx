@@ -7,7 +7,6 @@ import HRLogin from './components/HRLogin';
 
 import HRRegister from './components/HRRegister';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Desktop1 from './components/demo';
 import RatingForm from './components/RatingForm';
 import AdminLogin from './components/CCRAdminLogin';
 import Home from './components/Home';
@@ -19,6 +18,7 @@ import CCRAdminDash from './components/CCRAdminDash';
 import SuperAdminDash from './components/SuperAdminDash';
 import AddCcrAdmin from './components/AddCcrAdmin';
 import CCRAdminLogin from './components/CCRAdminLogin';
+import CandidateDash from './components/CandidateDash';
 
 
 function App() {
@@ -33,6 +33,8 @@ function App() {
       <Route path='/registerhr' element={<HRRegister/>}/>
       <Route path='/registercandidate' element={<CandidateRegister/>}/>
       <Route path='/logincandidate' element={<CandidateLogin/>}/>
+      <Route path='/candidatedash' element={<CandidateDash/>}/>
+
       {/* <Route path='/d1' element={<Desktop1/>}/> */}
       {/* <Route path='/ratingform' element={<RatingForm/>}/> */}
 
