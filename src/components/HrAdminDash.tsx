@@ -20,7 +20,7 @@ const HrAdminDash = () => {
 
     const handleSubmit2 = (event : React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        navigate("/rating");
+        navigate("/rform");
     }
 
 
