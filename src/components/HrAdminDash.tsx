@@ -18,6 +18,10 @@ const HrAdminDash = () => {
         navigate("/addRecruiter");
     }
 
+    const handleSubmit2 = (event : React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        navigate("/rating");
+    }
 
 
 
@@ -27,6 +31,9 @@ return(
 
     <form  onSubmit={(e) => handleSubmit(e)} ><br/><br/><br/>
     <button style={{width:'200px',height:'50px'}} type={"submit"}>Add Recruiter</button>
+    </form>
+    <form  onSubmit={(e) => handleSubmit2(e)} ><br/><br/><br/>
+    <button style={{width:'200px',height:'50px'}} type={"submit"}>Add Rating</button>
     </form>
     </div>
 )
