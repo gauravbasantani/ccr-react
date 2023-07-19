@@ -32,13 +32,18 @@ const HRLogin = () => {
   
     }).then(res=>{
       console.log(res);
+
       localStorage.setItem('hr_id', res.data.hr_id);
       localStorage.setItem('hr_name', res.data.hr_name);
       localStorage.setItem('hr_email', res.data.hr_email);
       localStorage.setItem('hr_role', res.data.hr_role);
-
+      
       console.log(res.data.hr_role);
+      
+
       navigate("/hradminDash");
+
+      
       
     }).catch(()=>{
       console.log("error")
@@ -51,9 +56,9 @@ const HRLogin = () => {
         <p className='heading'>HR Login</p>
 
         <form className='form' onSubmit={(e)=>handleSubmit(e)}>
-            <input type='email' name={'hr_email'} value={data.hr_email} id='hr_email' onChange={(e)=>handleChange(e)} placeholder='Enter email address' />
-            <input type='password' name={'hr_password'} value={data.hr_password} id='hr_password' onChange={(e)=>handleChange(e)} placeholder='Enter passsword' />    
-            <button className='btn' type={'submit'}>Submit</button>
+            <input type='email' name={'hr_email'} value={data.hr_email} id='hr_email' onChange={(e)=>handleChange(e)} placeholder='Enter email address' /><br/>
+            <input type='password' name={'hr_password'} value={data.hr_password} id='hr_password' onChange={(e)=>handleChange(e)} placeholder='Enter passsword' /> <br/>  
+            <button className='btn' type={'submit'}>Submit</button><br/>
            <Link className='lin' to="/registerhr" >Register</Link>
            
          </form>   
