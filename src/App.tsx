@@ -8,11 +8,15 @@ import HRLogin from './components/HRLogin';
 import HRRegister from './components/HRRegister';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RatingForm from './components/RatingForm';
+import AdminLogin from './components/AdminLogin';
 import Home from './components/Home';
 import Rating from './components/Rating';
 import ForgotPasswordCand from './components/ForgotPasswordCand';
 import EnterOTP from './components/EnterOTP';
 import EnterPassword from './components/EnterPassword';
+import CCRAdmin from './components/CCRAdmin';
+import SuperAdmin from './components/SuperAdmin';
+import AddCcrAdmin from './components/AddCcrAdmin';
 
 
 function App() {
@@ -33,6 +37,13 @@ function App() {
        <Route path='/enteremail' element={<ForgotPasswordCand/>}/> 
    <Route path='/enterotp' element={<EnterOTP/>}/>
    <Route path='/enterpassword' element={<EnterPassword/>}/>
+
+   <Route path='/adminlogin' element={<AdminLogin/>}/>
+   <Route path='/ccradmindash' element={<CCRAdmin/>}/>
+   <Route path='/superadmindash' element={<SuperAdmin/>}/>
+   <Route path='/addccradmin' element={<AddCcrAdmin/>}/>
+
+
    
 
     </Routes>

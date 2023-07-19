@@ -16,6 +16,7 @@ margin: 100px 0;
     justify-content: center;
     font-size: 24px;
     font-weight: 600;
+    /* text-align: center; */
 }
 .form{
     margin: 25px;
@@ -36,6 +37,11 @@ input{
     
     width: 60px;
     margin: auto;
+   
+}
+button{
+margin-left: 2%;  
+
 }
 
 .lin{
