@@ -14,7 +14,11 @@ type RatingData = {
   q8: boolean;
   q9: boolean;
   q10: boolean;
+  
 };
+type AuthComment={
+  comment: string,
+}
 const RForm = () => {
   const [answers, setAnswers] = useState<RatingData>({
     q1: false,
@@ -27,16 +31,23 @@ const RForm = () => {
     q8: false,
     q9: false,
     q10: false,
+    
   });
+
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>{
     // e.preventDefault();
     setAnswers({...answers,[e.target.name] : e.target.value});
     
     console.log({...answers,[e.target.name] : e.target.value});
   }
+  
+
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
+
+
     axios.post('http://localhost:8090/saveYesNo', {
         q1 : answers.q1,
         q2 : answers.q2,
@@ -55,7 +66,7 @@ const RForm = () => {
 
   return (
     <div>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form className="form" onSubmit={(e) => handleSubmit(e)}>
 
 
       
@@ -85,7 +96,11 @@ const RForm = () => {
           );
         })}
       </table>
+
+
       <button className='btn' type={"submit"}>Submit</button>
+
+
       </form>
     </div>
   );
