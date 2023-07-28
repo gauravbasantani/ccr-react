@@ -19,7 +19,28 @@ td{
 .rating{
     padding: 50px;
 }
+
+.text-area{
+display: flex;
+justify-content: center;
+margin: 25px;
+padding: 5px;
+}
+
+textarea{
+   
+    width: 500px;
+    height: 150px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
 .submitButton{
+   
+   
     margin-top: 10px;
     text-align: center;
 }
