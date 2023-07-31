@@ -52,6 +52,8 @@
 
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 
 type Candidate = {
   candidate: any;
@@ -60,14 +62,19 @@ type Candidate = {
 
 const ReviewComments: React.FC = () => {
   const [data, setData] = useState<Candidate[]>([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
     axios.get('http://localhost:8090/getallcandidatescomment').then((res) => {
+      console.log(res.data)
       setData(res.data);
       // console.log(first);
        // Assuming the server response is an array of candidates
     });
   }, []);
+
+  const handleView = ()=>{
+    navigate('/reviewcomment')
+  }
 
   return (
     <div>
@@ -77,9 +84,9 @@ const ReviewComments: React.FC = () => {
           <th>Action</th>
         </tr>
         {data.map((candidate) => (
-          <tr key={candidate.candidate.candidate_name}>
+          <tr key={candidate.candidate.candidate_id}>
             <td>{candidate.candidate.candidate_name}</td>
-            <td> <button>View</button></td>
+            <td> <Link to={"/reviewsinglecomment/" +candidate.candidate.candidate_id}>View</Link></td>
           </tr>
         ))}
       </table>
