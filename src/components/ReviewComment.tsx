@@ -22,7 +22,7 @@ const ReviewComment = () => {
         console.log({...text,[e.target.name] : e.target.value});
       }
 const useEffect = (e:React.ChangeEvent<HTMLTextAreaElement>)=>{
-axios.get(`http://localhost:8090/getcommentrequest?candidate_id=1&hr_id=3&comment_id=1`,{
+axios.get(`http://localhost:8090/getcommentrequest`,{
    
 
 }).then((res)=>{
@@ -34,7 +34,7 @@ axios.get(`http://localhost:8090/getcommentrequest?candidate_id=1&hr_id=3&commen
         e.preventDefault();
     
     
-        axios.get(`http://localhost:8090/getcommentrequest?candidate_id=1&hr_id=3&comment_id=1`, {
+        axios.get(`http://localhost:8090/getcommentrequest`, {
           
             
       }).then((res)=>{

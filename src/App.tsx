@@ -23,6 +23,7 @@ import CandidateDash from './components/CandidateDash';
 import Comment from './components/Comment';
 import ReviewComment from './components/ReviewComment';
 import ReviewComments from './components/ReviewComments';
+import ReviewSingleComment from './components/ReviewSingleComment';
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
       <Route path='/hrcomment' element={<Comment/>}/>
       <Route path='/reviewcomment' element={<ReviewComment/>}/>
       <Route path='/reviewcomments' element={<ReviewComments/>}/>
+      <Route path='/reviewsinglecomment' element={<ReviewSingleComment/>}/>
 
       {/* <Route path='/rating' element={<Rating/>}/> */}
        <Route path='/enteremail' element={<ForgotPasswordCand/>}/> 
